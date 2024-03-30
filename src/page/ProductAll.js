@@ -16,12 +16,12 @@ const ProductAll = () => {
   const getProduct = async () => {
     try {
       let searchQuery = query.get("q") || "";
-      let url = `http://localhost:4000/products?q=${searchQuery}`;
+      let url = `http://my-json-server.typicode.com/dongcheon1020/uniqlo/products?q=${searchQuery}`;
       let response = await fetch(url);
       let data = await response.json();
       setProductList(data);
       console.log(data);
-      if (data.length == 0) {
+      if (data.length === 0) {
         throw new Error("검색결과가 없습니다.");
       } else {
         setError(null);
