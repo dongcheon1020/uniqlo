@@ -34,7 +34,7 @@ const Header = ({}) => {
         onMouseLeave={() => setHover(false)}
         style={{
           height: hover === true ? 300 : 50,
-          backgroundColor: "#f5f5f7",
+          backgroundColor: hover === true ? "#f5f5f7" : "#f5f5f7c6",
         }}
       >
         <div className="wrapper header">
