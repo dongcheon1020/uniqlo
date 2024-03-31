@@ -25,7 +25,9 @@ const Header = ({}) => {
             width: "100vw",
             height: "100vh",
             backgroundColor: "#1d1d1f69",
-            BackdropFilter: "blur(20px) saturate(1.8)",
+            BackdropFilter: "blur(10px) saturate(1.8)",
+            WebkitBackdropFilter: "blur(10px) saturate(1.8)",
+            zIndex: "999",
           }}
         ></div>
       )}

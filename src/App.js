@@ -15,25 +15,11 @@ import PrivateRoute from "./route/PrivateRoute";
 
 function App() {
   const [login, setLogin] = useState(false);
-  // const navigate = useNavigate();
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <ProductAll />,
-    },
-    {
-      path: "/product/:id",
-      element: <PrivateRoute login={login} />,
-    },
-    {
-      path: "/login",
-      element: <Login setLogin={setLogin} />,
-    },
-  ]);
+  const [bookmark, setBookmark] = useState([]);
 
   useEffect(() => {
-    console.log(login);
-  }, [login]);
+    console.log(login, bookmark);
+  }, [login, bookmark]);
 
   return (
     <div className="bg">
@@ -41,8 +27,18 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<ProductAll />} />
-          <Route path="/product/:id" element={<PrivateRoute login={login} />} />
+          <Route
+            path="/product/:id"
+            element={
+              <PrivateRoute
+                login={login}
+                setBookmark={setBookmark}
+                bookmark={bookmark}
+              />
+            }
+          />
           <Route path="/login" element={<Login setLogin={setLogin} />} />
+          <Route path="/bookmark" />
         </Routes>
       </BrowserRouter>
     </div>

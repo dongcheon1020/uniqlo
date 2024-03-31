@@ -9,7 +9,7 @@ const Login = ({ setLogin }) => {
   };
   return (
     <div className="wrapper" style={{ height: "calc(100vh - 150px)" }}>
-      <h2 style={{ fontSize: 40, color: "#1d1d1f" }}>
+      <h2 style={{ fontSize: 40, color: "#1d1d1f" }} className="login-title">
         상품 상세페이지를 보려면 로그인하세요.
       </h2>
       <div className="login-box">
