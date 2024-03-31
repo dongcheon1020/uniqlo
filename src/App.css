@@ -343,4 +343,12 @@ form {
     box-sizing: border-box;
     padding-bottom: 50px;
   }
+  .header-menu {
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  .header-headers-b {
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
 }
