@@ -316,6 +316,8 @@ form {
   .login-box {
     padding: 0 20px;
     box-sizing: border-box;
+    background-color: red;
+    width: 100%;
   }
   .submit {
     right: 35px;
